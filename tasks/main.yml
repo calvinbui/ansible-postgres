@@ -4,6 +4,10 @@
   apt_key:
     url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
     state: present
+  register: result
+  until: result is success
+  retries: 5
+  delay: 5
 
 - name: Add postgres repo
   apt_repository:
@@ -25,8 +29,6 @@
   apt:
     name: "python-psycopg2"
     state: present
-  become: yes
-  become: yes
   register: result
   until: result is success
   retries: 5
@@ -38,6 +40,7 @@
     encoding: UTF8
     template: template0
   become_user: postgres
+  become: yes
 
 - name: Create db user
   postgresql_user:
@@ -47,3 +50,4 @@
     priv: ALL
     state: present
   become_user: postgres
+  become: yes

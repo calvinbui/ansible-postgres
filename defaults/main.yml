@@ -1,0 +1,6 @@
+---
+
+postgres_version: 9.6
+postgres_db_name: mydb
+postgres_db_user: postgres
+postgres_db_password: pgpassword

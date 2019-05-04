@@ -34,6 +34,11 @@
   retries: 5
   delay: 5
 
+- name: Start postgres
+  service:
+    name: postgresql
+    state: started
+
 - name: Create db
   postgresql_db:
     name: "{{ postgres_db_name }}"

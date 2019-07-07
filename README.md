@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.com/calvinbui/ansible-postgres.svg?branch=master)](https://travis-ci.com/calvinbui/ansible-postgres)
+![GitHub release](https://img.shields.io/github/release/calvinbui/ansible-postgres.svg)
+![Ansible Quality Score](https://img.shields.io/ansible/quality/36581.svg)
+![Ansible Role](https://img.shields.io/ansible/role/d/36581.svg)
 
 # Ansible Postgres
 
